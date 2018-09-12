@@ -3,6 +3,9 @@
   background: rgba(255, 255, 255, 0.2);
   margin: 16px;
 }
+.main {
+  background: skyblue;
+}
 
 @keyframes App-logo-spin {
   from {
