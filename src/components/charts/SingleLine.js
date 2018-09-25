@@ -4,10 +4,22 @@ export default class SingleLine extends Component {
   componentDidMount() {
     this.draw();
   }
+
   render() {
+    let tooltip_style = {
+      width: '90px',
+      height: '100px',
+      background: 'rgba(255,255,255,1)',
+      border: '1px solid #ccc',
+      borderRadius: '2px',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      visibility: 'hidden'
+    };
     return (
-      <div>
-        <svg width="500" height="360" id="singleLine" />
+      <div id="singleLine">
+        <div className="tooltip" style={tooltip_style} />
       </div>
     );
   }
@@ -51,7 +63,11 @@ export default class SingleLine extends Component {
         value: 13
       }
     ];
-    let svg = d3.select('#singleLine');
+    let chart = d3.select('#singleLine');
+    let svg = chart
+      .append('svg')
+      .attr('width', '500')
+      .attr('height', '360');
     const margin = { top: 20, right: 20, bottom: 30, left: 50 };
     const width = svg.attr('width') - margin.left - margin.right;
     const height = svg.attr('height') - margin.top - margin.bottom;
@@ -181,6 +197,7 @@ export default class SingleLine extends Component {
       .attr('stroke', 'blue')
       .attr('stroke-width', '1')
       .on('mouseover', function(d, i) {
+        d3.selectAll('.dot-active').remove();
         g.append('g')
           .attr('class', 'dot-active')
           .append('circle')
@@ -193,11 +210,18 @@ export default class SingleLine extends Component {
           .attr('r', 7)
           .attr('fill', 'red')
           .on('mouseout', function(d, i) {
-            d3.select(this)
+            d3.selectAll('.dot-active').remove();
+            d3.select('.tooltip')
               .transition()
-              .duration(200)
-              .remove();
+              .duration(500)
+              .style('visibility', 'hidden');
           });
+        d3.select('.tooltip')
+          .transition()
+          .duration(500)
+          .style('visibility', 'visible')
+          .style('left', d3.event.offsetX + 10 + 'px')
+          .style('top', d3.event.offsetY - 110 + 'px');
       });
   };
 }
