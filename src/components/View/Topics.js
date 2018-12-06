@@ -1,14 +1,22 @@
-import React, { Component } from "react";
-import { Route, withRouter } from "react-router-dom";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import ButtonView from './ButtonView';
+import GridView from './GridView';
 
-class Topics extends Component {
-  render() {
-    return <div>{this.props.location}</div>;
-  }
+const Topics = () => {
+  return (
+    <div
+      style={{
+        minHeight: 360
+      }}
+      className="main"
+    >
+      <Switch>
+        <Route path="/topics/button" component={ButtonView} />
+        <Route path="/topics/grid" component={GridView} />
+      </Switch>
+    </div>
+  );
+};
 
-  componentWillMount() {
-    console.log(this.props.location);
-  }
-}
-
-export default withRouter(Topics);
+export default Topics;

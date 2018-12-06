@@ -73,7 +73,7 @@ export default class SingleLine extends Component {
     const height = svg.attr('height') - margin.top - margin.bottom;
     // 将日期处理为日期对象
     var parseTime = d3.timeParse('%Y');
-    dataset.map(o => {
+    dataset.forEach(o => {
       o.year = parseTime(o.year);
     });
     let g = svg

@@ -51,11 +51,11 @@ class MySider extends Component {
               </span>
             }
           >
-            <Menu.Item key="/topics/aric">
-              <Link to="/topics/aric">Aric</Link>
+            <Menu.Item key="/topics/button">
+              <Link to="/topics/button">Button</Link>
             </Menu.Item>
-            <Menu.Item key="/topics/bill">
-              <Link to="/topics/bill">Bill</Link>
+            <Menu.Item key="/topics/grid">
+              <Link to="/topics/grid">Grid</Link>
             </Menu.Item>
             <Menu.Item key="/topics/alex">
               <Link to="/topics/alex">Alex</Link>
