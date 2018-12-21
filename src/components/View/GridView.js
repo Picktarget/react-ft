@@ -45,54 +45,88 @@ class GridView extends Component {
 
     return (
       <React.Fragment>
-        <Row>
-          <Col span={12}>col-12</Col>
-          <Col span={12}>col-12</Col>
-        </Row>
-        <Row>
-          <Col span={8}>col-8</Col>
-          <Col span={8}>col-8</Col>
-          <Col span={8}>col-8</Col>
-        </Row>
-        <Row>
-          <Col span={6}>col-6</Col>
-          <Col span={6}>col-6</Col>
-          <Col span={6}>col-6</Col>
-          <Col span={6}>col-6</Col>
-        </Row>
-        <Row gutter={16}>
-          <Col className="gutter-row" span={6}>
-            <div className="gutter-box">col-6</div>
-          </Col>
-          <Col className="gutter-row" span={6}>
-            <div className="gutter-box">col-6</div>
-          </Col>
-          <Col className="gutter-row" span={6}>
-            <div className="gutter-box">col-6</div>
-          </Col>
-          <Col className="gutter-row" span={6}>
-            <div className="gutter-box">col-6</div>
-          </Col>
-        </Row>
-        <Row>
-          <Col span={8}>col-8</Col>
-          <Col span={8} offset={8}>
-            col-8
-          </Col>
-        </Row>
-        <Row>
-          <Col span={6} offset={6}>
-            col-6 col-offset-6
-          </Col>
-          <Col span={6} offset={6}>
-            col-6 col-offset-6
-          </Col>
-        </Row>
-        <Row>
-          <Col span={12} offset={6}>
-            col-12 col-offset-6
-          </Col>
-        </Row>
+        <div>
+          <p>基础栅格</p>
+          <Row>
+            <Col span={24}>col-24</Col>
+          </Row>
+          <Row>
+            <Col span={12}>col-12</Col>
+            <Col span={12}>col-12</Col>
+          </Row>
+          <Row>
+            <Col span={8}>col-8</Col>
+            <Col span={8}>col-8</Col>
+            <Col span={8}>col-8</Col>
+          </Row>
+          <Row>
+            <Col span={6}>col-6</Col>
+            <Col span={6}>col-6</Col>
+            <Col span={6}>col-6</Col>
+            <Col span={6}>col-6</Col>
+          </Row>
+          <Row>
+            <Col span={4}>col-4</Col>
+            <Col span={4}>col-4</Col>
+            <Col span={4}>col-4</Col>
+            <Col span={4}>col-4</Col>
+            <Col span={4}>col-4</Col>
+            <Col span={4}>col-4</Col>
+          </Row>
+          <Row>
+            <Col span={2}>col-2</Col>
+            <Col span={2}>col-2</Col>
+            <Col span={2}>col-2</Col>
+            <Col span={2}>col-2</Col>
+            <Col span={2}>col-2</Col>
+            <Col span={2}>col-2</Col>
+            <Col span={2}>col-2</Col>
+            <Col span={2}>col-2</Col>
+            <Col span={2}>col-2</Col>
+            <Col span={2}>col-2</Col>
+            <Col span={2}>col-2</Col>
+            <Col span={2}>col-2</Col>
+          </Row>
+        </div>
+        <div>
+          <p>区块间隔</p>
+          <Row gutter={16}>
+            <Col className="gutter-row" span={6}>
+              <div className="gutter-box">col-6</div>
+            </Col>
+            <Col className="gutter-row" span={6}>
+              <div className="gutter-box">col-6</div>
+            </Col>
+            <Col className="gutter-row" span={6}>
+              <div className="gutter-box">col-6</div>
+            </Col>
+            <Col className="gutter-row" span={6}>
+              <div className="gutter-box">col-6</div>
+            </Col>
+          </Row>
+        </div>
+        <div>
+          <p>左右偏移</p>
+          <Row>
+            <Col span={8}>col-8</Col>
+            <Col span={8} offset={8}>
+              col-8
+            </Col>
+          </Row>
+          <Row>
+            <Col span={6} offset={6}>
+              col-6 col-offset-6
+            </Col>
+            <Col span={6} offset={6}>
+              col-6 col-offset-6
+            </Col>
+          </Row>
+          <Row>
+            <Col span={12} offset={6}>
+              col-12 col-offset-6
+            </Col>
+          </Row>
+        </div>
         <Row>
           <Col span={18} push={6}>
             col-18 col-push-6

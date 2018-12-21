@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import RowContext from './RowContext';
+import './grid.less';
 
 const stringOrNumber = PropTypes.oneOfType([
   PropTypes.string,

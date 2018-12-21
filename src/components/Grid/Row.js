@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import RowContext from './RowContext';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+// import './grid.less';
 
 let enquire;
 if (typeof window !== 'undefined') {
